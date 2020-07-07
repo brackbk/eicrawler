@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+
+  mongo:
+    image: 'bitnami/mongodb:latest'
+    restart: always
+    environment:
+      - MONGODB_USERNAME=admin
+      - MONGODB_PASSWORD=d8tv9qhkmb
+      - MONGODB_DATABASE=eicrawler
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./volume/mongodb:/data/db
